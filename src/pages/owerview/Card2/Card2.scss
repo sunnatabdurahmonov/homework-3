@@ -1,0 +1,26 @@
+.box2{
+    width: 342px;
+    height: 109.2px;
+    border: 1px solid #DFE0EB;
+    opacity: 0.8;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 10px;
+}
+
+.box2>h2{
+    color: #9FA2B4;
+    font-size: 20px;
+
+}
+
+
+.box2>p{
+    font-size: 24px;
+    color: black;
+    font-weight: 700;
+}

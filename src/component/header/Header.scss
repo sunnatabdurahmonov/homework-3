@@ -1,0 +1,32 @@
+.nav{
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+}
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: calc(100vw - 255px);
+}
+.jones{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+.nav-list{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    column-gap: 40px;
+}
+.logo>img{
+    padding-left: 15px;
+}
+.container{
+    max-width: 1122px;
+    width: 100%;
+    margin: 0 auto;
+    padding:20px  20px;
+  }

@@ -1,0 +1,25 @@
+.headerTickets{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+.tickets-list{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    column-gap: 20px;
+}
+.tickets-item{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+.tickets-item>p{
+    color: #4B506D;
+    font-size: 15px;
+}
+.tickets-item>h2{
+    color: #252733;
+    font-size: 20px;
+}

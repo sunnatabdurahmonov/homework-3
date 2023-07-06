@@ -1,0 +1,52 @@
+#w-h4{
+    color: #C5C7CD;
+}
+.input{
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+.waiting2{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.yellow{
+    background-color: #FEC400;
+    border: none;
+    color: white;
+    padding: 10px;
+    width: 74px;
+    border-radius: 10px;
+}
+.yellow:hover{
+    border: 1px solid #FEC400;
+    background-color: white;
+    color: black;
+    box-sizing: border-box;
+}
+.green{
+    background-color: #29CC97;
+    border: none;
+    color: white;
+    padding: 10px;
+    width: 54px;
+    border-radius: 10px;
+}
+.green:hover{
+    border: 1px solid #29CC97;
+    background-color: white;
+    color: black;
+}
+.default{
+    border: none;
+    color: #C5C7CD;
+    padding: 10px;
+    width: 74px;
+    border-radius: 10px;
+
+}
+.default:hover{
+    border: 1px solid #C5C7CD;
+    background-color: white;
+}

@@ -1,0 +1,53 @@
+.ticketsBox{
+    height: 80vh;
+    overflow: scroll;
+    position: relative;
+    width: calc(100vw - 255px);
+
+}
+
+table {
+    border-collapse: collapse;
+    max-width: 100%;
+    width: 100%;
+}
+
+
+td {
+    text-align: justify;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+#user_list {
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
+
+th {
+    font-size: 14px;
+    font-weight: 400;
+    color: #9FA2B4;
+    font-weight: 600;
+}
+.tr{
+    width: 100%;
+    border: 1px solid #DFE0EB;
+    border-radius: 4px;
+    background-color: white;
+}
+tr:hover{
+    background-color:#F7F8FC;
+}
+.tr2{
+    margin-left: 20px;
+}
+th{
+    text-align: justify;
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

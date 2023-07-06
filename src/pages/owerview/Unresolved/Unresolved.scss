@@ -1,0 +1,47 @@
+.box3{
+    width: 530px;
+    padding:20px;
+    // height: 336px;
+    border: 1px solid #DFE0EB;
+    opacity: 0.8;
+    border-radius: 10px;
+    position: relative;
+}
+.group>h4{
+    font-size: 20px;
+
+}
+.group>p{
+    font-size: 12px;
+    color: #4B506D;
+    padding-top: 5px;
+}
+
+.group-menu{
+    display: flex;
+    justify-content: space-between;
+}
+.view{
+    color: #3751FF;
+}
+.waiting{
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+.waiting>p{
+    color: #9FA2B4;
+    font-size: 15px;
+}
+.waiting>h4{
+    color: #252733;
+    font-size: 15px;
+}
+.div-4{
+    border: 1px solid  #DFE0EB;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    margin-top: 10px;
+}

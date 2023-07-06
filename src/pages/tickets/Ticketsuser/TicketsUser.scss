@@ -1,0 +1,19 @@
+.user{
+    display: flex;
+    align-items: center;
+    &__text{
+        display: flex;
+        align-items: center;
+    }
+}
+.user-title{
+    font-size: 15px;
+    color: #252733;
+    padding-left: 15px;
+}
+.user-text-disc{
+    font-size: 12px;
+    color: #C5C7CD;
+    padding-left: 15px;
+    padding-top: 10px;
+}

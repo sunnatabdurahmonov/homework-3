@@ -1,0 +1,28 @@
+.box{
+    width: 258px;
+    height: 134px;
+    border: 1px solid #DFE0EB;
+    opacity: 0.8;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 10px;
+    color: #9FA2B4;
+}
+.box:hover{
+    border: 1px solid blue;
+    transition: 0.5s ease;
+    transform: scale(1.1);
+    color: blue;
+}
+.box>h2{
+    font-size: 20px;
+
+}
+.box>p{
+    font-size: 40px;
+    color: #252733;
+    font-weight: 700;
+}
