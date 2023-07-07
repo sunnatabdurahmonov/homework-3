@@ -12,6 +12,10 @@ import Articles from './pages/pages2/Articles';
 import Contacts from './pages/pages2/Contacts';
 import Settings from './pages/pages2/Settings';
 import Subscription from './pages/pages2/Subscription';
+import Users from './pages/Post/Posts';
+import Posts from './pages/Post/Posts';
+import PostSingle from './pages/pages2/PostSingle/PostSingle';
+import Comment from './pages/pages2/Comment/Comment';
 
 
 const routes =  createBrowserRouter([
@@ -29,8 +33,13 @@ const routes =  createBrowserRouter([
         element:<Tickets/>
       },
       {
-        path:'/ideas',
-        element:<Ideas/>
+        path:'/posts',
+        element:<Posts/>
+      },
+      {
+        path:'posts/:postId',
+        element:<PostSingle/>
+
       },
       {
         path:'/agents',

@@ -1,0 +1,1 @@
+export {PostSingle} from './PostSingle'

@@ -35,8 +35,8 @@ export const Sidebar = () => {
             />
                <SidebarLink
                 imglink={logo3}
-                title='Ideas'
-                link='ideas'
+                title='Posts'
+                link='/posts'
             />
                <SidebarLink
                 imglink={logo4}
