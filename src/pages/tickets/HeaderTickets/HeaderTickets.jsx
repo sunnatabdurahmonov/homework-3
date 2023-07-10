@@ -8,7 +8,7 @@ import { HeaderContext } from '../../../context/Context'
 const HeaderTickets = () => {
   const {theme} = useContext(HeaderContext)
   return (
-    <div className={`headerTickets ${theme === true ? 'header__light' : 'header__dark'}`}>
+    <div className={`headerTickets ${theme === false ? 'header__light' : 'header__dark'}`}>
       <h2>All tickets</h2>
       <ul className='tickets-list'>
         <li className='tickets-item'>

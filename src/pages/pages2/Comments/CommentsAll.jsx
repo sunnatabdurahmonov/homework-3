@@ -50,7 +50,7 @@ const CommentsAll = () => {
   return (
       
       <>
-    <div className={`modal-list ${theme === true ? 'header__light' : 'header__dark'}`}>
+    <div className={`modal-list ${theme === false ? 'header__light' : 'header__dark'}`}>
     <CommentsModal modalState={modalState} setModalState={setModalState}/>
     </div>
 

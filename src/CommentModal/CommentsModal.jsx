@@ -40,7 +40,7 @@ const CommentsModal = ({modalState,setModalState }) => {
     }
   return (
     <div className={`modal ${modalState ? 'open' : ''}`}>
-        <div className={`modal-menu ${theme === true ? 'header__light' : 'header__dark'}`}>
+        <div className={`modal-menu ${theme === false ? 'header__light' : 'header__dark'}`}>
          <i onClick={handleClose}  class="fa-solid fa-xmark icon-1"></i>
 
          {

@@ -31,7 +31,7 @@ const Tickets = () => {
       <div className="ticketsBox tr">
         <HeaderTickets/> 
         <table id='user_list'>
-            <thead className={` ${theme === true ? 'header__light' : 'header__dark'}`}>
+            <thead className={` ${theme === false ? 'header__light' : 'header__dark'}`}>
                 <tr className='tr2'>
                     <th>Ticket details</th>
                     <th>Customer name</th>

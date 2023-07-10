@@ -8,9 +8,7 @@ import { useState } from "react";
     const [headerTitle,setHeaderTitle] = useState("Overview")
     const [commentId,setCommentId] = useState(null)
 
-
-    const themeLocal = window.localStorage.getItem('theme')
-    const [theme,setTheme] = useState(themeLocal || false)
+    const [theme,setTheme] = useState(false)
 
 
     let info = {
@@ -22,11 +20,6 @@ import { useState } from "react";
         setTheme,
 
     }
-
-    useEffect(() => {
-        window.localStorage.setItem('theme' , theme)
-
-    },[theme])
     return (
         <HeaderContext.Provider value={info}>
         {children}

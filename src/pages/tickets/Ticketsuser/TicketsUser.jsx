@@ -8,7 +8,7 @@ const TicketsUser = ({imglink,title,text,title1,title2,text1,text2,btn}) => {
   const {theme} = useContext(HeaderContext)
   return (
     <>
-     <td className={`td-list ${theme === true ? 'header__light' : 'header__dark'}`}>
+     <td className={`td-list ${theme === false ? 'header__light' : 'header__dark'}`}>
       <td className='user'>
       <img src={imglink} alt={title} />
       <td className="user-text">
@@ -19,16 +19,16 @@ const TicketsUser = ({imglink,title,text,title1,title2,text1,text2,btn}) => {
       </td>
 
       
-      <td className={`user-td ${theme === true ? 'header__light' : 'header__dark'}`}>
+      <td className={`user-td ${theme === false ? 'header__light' : 'header__dark'}`}>
         <h5 className='user-title'>{title1}</h5>
         <p className='user-text-disc'>{text1}</p>
       </td>
 
-      <td className={`user-td ${theme === true ? 'header__light' : 'header__dark'}`}>
+      <td className={`user-td ${theme === false ? 'header__light' : 'header__dark'}`}>
         <h5 className='user-title'>{title2}</h5>
         <p className='user-text-disc'>{text2}</p>
       </td>
-      <td className={` ${theme === true ? 'header__light' : 'header__dark'}`}>
+      <td className={` ${theme === false ? 'header__light' : 'header__dark'}`}>
         {btn}
       </td>
     </>

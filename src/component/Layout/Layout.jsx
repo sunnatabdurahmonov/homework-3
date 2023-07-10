@@ -9,7 +9,7 @@ import { HeaderContext } from '../../context/Context'
 export const Layout = () => {
   const {theme} =  useContext(HeaderContext)
   return (
-    <div className={`layout ${theme == true ? 'header__light' : 'header__dark'}`}>
+    <div className={`layout ${theme === false ? 'header__light' : 'header__dark'}`}>
         <Sidebar/>
         <div>
             <Header/>
