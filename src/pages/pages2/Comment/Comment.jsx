@@ -39,6 +39,7 @@ const Comment = () => {
   return (
     <div>
         {
+            
             comment.data.map((user) => (
                 <div className="user-card comment">
                     <h2><span>Name: </span>  {user.name}</h2>

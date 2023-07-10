@@ -1,0 +1,14 @@
+.comments-all{
+    height: 89vh;
+    overflow: scroll;
+    z-index: 888;
+}
+.comments-link{
+    text-decoration: none;
+    color: #000;
+}
+.modal-list{
+    position: absolute;
+    z-index: 999;
+    opacity: 1;
+}

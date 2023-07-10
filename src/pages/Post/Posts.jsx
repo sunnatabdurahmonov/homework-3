@@ -1,12 +1,16 @@
 import React from 'react'
 import '../Post/Posts.scss'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Url } from '../../Url'
 import axios from 'axios'
 import { UsersCard } from './UsersCard'
+import { useContext } from 'react'
+import { useEffect } from 'react'
+import { HeaderContext } from '../../context/Context'
 
 
  const Posts = () => {
+    const {setHeaderTitle} = useContext(HeaderContext)
     const [post, setPost]  = useState({
         isFetched: false,
         error:null,
@@ -15,6 +19,7 @@ import { UsersCard } from './UsersCard'
 
 
     useEffect(() => {
+        setHeaderTitle('Posts')
        axios.get(`${Url}/posts`)
         .then(data => {
             setPost({
@@ -32,7 +37,7 @@ import { UsersCard } from './UsersCard'
         })
     })
   return (
-    <>
+    <div>
     <h2 className='h1'>Posts</h2>
  
     <div className='user-menu'>
@@ -49,7 +54,7 @@ import { UsersCard } from './UsersCard'
        ):<div className='loader'></div>
       }
     </div>
-        </>
+        </div>
   )
 }
 

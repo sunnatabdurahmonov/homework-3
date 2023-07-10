@@ -1,4 +1,3 @@
-import React from 'react'
 import '../tickets/tickets.scss'
 import HeaderTickets from './HeaderTickets/HeaderTickets'
 import TicketsUser from './Ticketsuser/TicketsUser'
@@ -13,15 +12,26 @@ import user8 from '../../assest/user8.png'
 import Button1 from './Ticketsuser/Button1/Button1'
 import Button2 from './Ticketsuser/Button2/Button2'
 import Button3 from './Ticketsuser/Button3/Button3'
+import { useContext } from 'react'
+import { useEffect } from 'react'
+import { HeaderContext } from '../../context/Context'
+
 
 const Tickets = () => {
+  const {setHeaderTitle} = useContext(HeaderContext)
+  const {theme} = useContext(HeaderContext)
+
+  useEffect(() => {
+    setHeaderTitle('Tickets')
+  })
+
   return (
     <div>
       <div className="container">
       <div className="ticketsBox tr">
         <HeaderTickets/> 
-        <table id="user_list">
-            <thead>
+        <table id='user_list'>
+            <thead className={` ${theme === true ? 'header__light' : 'header__dark'}`}>
                 <tr className='tr2'>
                     <th>Ticket details</th>
                     <th>Customer name</th>

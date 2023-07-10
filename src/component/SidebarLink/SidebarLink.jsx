@@ -5,8 +5,8 @@ import { NavLink } from 'react-router-dom'
 
 export const SidebarLink = ({imglink, title, link}) => {
   return (
-    <div>
-      <NavLink className='navlink' to={link}>
+    <div className='navlik-class'>
+      <NavLink className={({isActive}) => `navlink ${isActive ? 'active' : ''}` } to={link}>
         <img src={imglink} alt={title} />
         <h3>{title}</h3>
       </NavLink>

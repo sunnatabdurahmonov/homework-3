@@ -7,10 +7,19 @@
     cursor: pointer;
     height: 56px;
     padding-left: 20px;
+    width: 100%;
+    padding-left: none;
 }
-.navlink:hover{
-    color: blue;
+.navlink-class{
+    position: absolute;
+    width: 100%;
+   right: 0;
 }
 .navlink>h3{
     font-size: 16px;
+}
+.active{
+    background-color: #9FA2B4;
+    opacity: 8;
+    border-left: 5px solid #DDE2FF;
 }

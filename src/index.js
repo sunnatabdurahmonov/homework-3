@@ -15,7 +15,10 @@ import Subscription from './pages/pages2/Subscription';
 import Users from './pages/Post/Posts';
 import Posts from './pages/Post/Posts';
 import PostSingle from './pages/pages2/PostSingle/PostSingle';
-import Comment from './pages/pages2/Comment/Comment';
+import CommentsAll from './pages/pages2/Comments/CommentsAll';
+import CommentsModal from './CommentModal/CommentsModal';
+import { HeaderContextProvider } from './context/Context';
+import App from './App';
 
 
 const routes =  createBrowserRouter([
@@ -35,6 +38,10 @@ const routes =  createBrowserRouter([
       {
         path:'/posts',
         element:<Posts/>
+      },
+      {
+        path:'/comments',
+        element:<CommentsAll/>
       },
       {
         path:'posts/:postId',
@@ -67,8 +74,10 @@ const routes =  createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <RouterProvider router={routes}/>
-  </React.StrictMode>
+   <HeaderContextProvider>
+   <RouterProvider router={routes}/>
+   <App/>
+   </HeaderContextProvider>
+
 )
 reportWebVitals();

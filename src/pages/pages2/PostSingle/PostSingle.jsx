@@ -4,8 +4,10 @@ import { Url } from '../../../Url'
 import '../PostSingle/PostSingle.scss'
 import Comment from '../Comment/Comment'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 const PostSingle = () => {
+  const navigate = useNavigate()
   const [state, setState]  = useState({
     isFetched: false,
     error:null,
@@ -31,12 +33,17 @@ const PostSingle = () => {
         })
     })
 })
+
+const handleClose = () => {
+  navigate(-1)
+}
   return (
     <div>
       <div>
     {
       (state.isFetched && Object.values(state.data).length) ? (
         <div>
+            <i id='icons' onClick={handleClose} class="fa-solid fa-arrow-right-from-bracket fa-rotate-180"></i>
            <h2 className='h1'>Post</h2>
           <div className="user-card ">
           <h1>{state.data?.title}</h1>
@@ -47,7 +54,7 @@ const PostSingle = () => {
          <Comment/>
          </div>
         </div>
-      ): <div className="loader"></div>
+      ): <div className="loader loading"></div>
     }
       </div>
     </div>

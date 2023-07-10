@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import '../Sidebar/Sidebar.scss'
 import logo from '../../assest/logo.svg'
 import SidebarLink from '../SidebarLink/SidebarLink'
@@ -11,7 +11,6 @@ import logo6 from '../../assest/logo6.svg'
 import logo7 from '../../assest/logo7.svg'
 import logo8 from '../../assest/logo8.svg'
 import Tickets from '../../pages/tickets/Tickets'
-
 export const Sidebar = () => {
   return (
     <div className='sidebar'>
@@ -38,20 +37,26 @@ export const Sidebar = () => {
                 title='Posts'
                 link='/posts'
             />
+              <SidebarLink
+                imglink={logo4}
+                title='Comments'
+                link='/comments'
+            />
                <SidebarLink
                 imglink={logo4}
                 title='Contacts'
-                link='contact'
+                link='/contact'
             />
+             
                <SidebarLink
                 imglink={logo5}
                 title='Agents'
-                link='agents'
+                link='/agents'
             />
                <SidebarLink
                 imglink={logo6}
                 title='Articles'
-                link='articles'
+                link='/articles'
             />
           </ul>
 
@@ -61,12 +66,12 @@ export const Sidebar = () => {
           <SidebarLink
                 imglink={logo7}
                 title='Settings'
-                link='setting'
+                link='/setting'
             />
               <SidebarLink
                 imglink={logo8}
                 title='Subscription'
-                link='subscription'
+                link='/subscription'
             />
 
           </ul>

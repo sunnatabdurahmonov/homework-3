@@ -1,5 +1,5 @@
 .ticketsBox{
-    height: 80vh;
+    height: 84.5vh;
     overflow: scroll;
     position: relative;
     width: calc(100vw - 255px);
@@ -20,7 +20,7 @@ td {
     padding-top: 10px;
 }
 
-#user_list {
+.user_list {
     max-width: 100%;
     width: 100%;
     text-align: center;
@@ -51,3 +51,16 @@ th{
     padding-top: 20px;
     padding-bottom: 20px;
 }
+.header__light{
+    background-color: white;
+  }
+  .header__dark{
+    background-color:#363740 !important;
+    color:#fff ;
+  }#header__light{
+    background-color: white;
+  }
+  #header__dark{
+    background-color:#363740 !important;
+    color:#fff ;
+  }

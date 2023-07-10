@@ -4,9 +4,20 @@ import '../owerview/owerview.scss'
 import Card2 from './Card2/Card2'
 import Unresolved from './Unresolved/Unresolved'
 import Task from './Tasks/Task'
+import { useContext } from 'react'
+import { HeaderContext } from '../../context/Context'
+import { useEffect } from 'react'
+
+
 
 
 const Owerviev = () => {
+  const {setHeaderTitle} = useContext(HeaderContext)
+  const {theme} = useContext(HeaderContext)
+
+  useEffect(() => {
+    setHeaderTitle('Overview')
+  })
   return (
     <div className='footer'>
       <div className="container">
