@@ -40,7 +40,7 @@ export const Header = () => {
             <option value="uz">uz</option>
             <option value="ru">ru</option>
           </select>
-            <h2>Jones Ferdinand</h2>
+            <h2>Jones Ferdinandi</h2>
             <img src={jones} alt="logo" />
             <SwitchExample/>
          </li>
