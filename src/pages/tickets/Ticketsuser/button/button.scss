@@ -1,0 +1,39 @@
+.btn{
+    border: none;
+    padding: 10px;
+    max-width: auto;
+    cursor: pointer;
+    color: white;
+    border-radius: 100px;
+
+    &.danger{
+        background-color: #F12B2C;
+    }
+    &.danger:hover{
+        background-color: white;
+        color: #F12B2C;
+        border: 1px solid #F12B2C;
+    }
+
+    &.warning{
+        background-color:#FEC400;
+        border-radius: 100px;
+    }
+    &.warning:hover{
+        background-color: white;
+        color: #FEC400;
+        border: 1px solid #FEC400;
+    }
+
+    &.success{
+        background-color:#29CC97;
+    }
+    &.success:hover{
+        background-color: white;
+        color: #29CC97;
+        border: 1px solid#29CC97;
+    }
+
+
+
+}

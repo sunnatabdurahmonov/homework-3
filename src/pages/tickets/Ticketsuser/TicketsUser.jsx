@@ -1,7 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../Ticketsuser/TicketsUser.scss'
-import { Link } from 'react-router-dom'
-import Button1 from './Button1/Button1'
 import { useContext } from 'react'
 import { HeaderContext } from '../../../context/Context'
 const TicketsUser = ({imglink,title,text,title1,title2,text1,text2,btn}) => {

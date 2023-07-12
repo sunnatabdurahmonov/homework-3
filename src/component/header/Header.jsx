@@ -11,9 +11,13 @@ export const Header = () => {
 
   const {headerTitle} = useContext(HeaderContext)
   const {theme} = useContext(HeaderContext)
-  console.log(theme);
+  const {lang, setLang } = useContext(HeaderContext)
 
+  const handleChangeLang = (e) => {
+    setLang(e.target.value)
+  }
   return (
+
     <div>
         <header className='header'>
         <div className="container">
@@ -31,6 +35,11 @@ export const Header = () => {
          </li>
 
          <li className="jones">
+          <select defaultValue={lang } onChange={handleChangeLang} className='select'>
+            <option value="en">en</option>
+            <option value="uz">uz</option>
+            <option value="ru">ru</option>
+          </select>
             <h2>Jones Ferdinand</h2>
             <img src={jones} alt="logo" />
             <SwitchExample/>

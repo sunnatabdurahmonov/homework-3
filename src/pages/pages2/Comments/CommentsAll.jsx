@@ -7,12 +7,16 @@ import { Link } from 'react-router-dom'
 import CommentsModal from '../../../CommentModal/CommentsModal'
 import { useContext } from 'react'
 import { HeaderContext } from '../../../context/Context'
+import { languageData } from '../../../Lang/Language'
+import { useFetch } from '../../../hooks/useFetchData'
 
 const CommentsAll = () => {
     const {setHeaderTitle} = useContext(HeaderContext)
     const [modalState,setModalState] = useState(false)
     const {setCommentId} = useContext(HeaderContext)
     const {theme} = useContext(HeaderContext)
+    const {lang} = useContext(HeaderContext)
+    const {data:comments} = useFetch({endpoint:'comments'})
 
     const HandleOpen = (comments) => {
         setModalState(true)
@@ -20,33 +24,10 @@ const CommentsAll = () => {
     } 
 
 
-    const [comments, setComments]  = useState({
-        isFetched: false,
-        error:null,
-        data:[]
-    })
+    useEffect(() => {
+        setHeaderTitle(languageData[lang].sidebar.comments)
+    },)
     
-    
-      useEffect(() => {
-
-        setHeaderTitle('Comments')
-
-     axios.get(`${Url}/comments`)
-        .then(data => {
-            setComments({
-                isFetched:true,
-                error:false,
-                data:data.data
-            })
-        })
-        .catch(err => {
-            setComments({
-                isFetched:false,
-                error:err,
-                data:[]
-            })
-        })
-    },[])
   return (
       
       <>
@@ -59,7 +40,7 @@ const CommentsAll = () => {
             (comments.isFetched && Object.values(comments.data).length) ? (
                 comments.data.map((user) => (
                     <div className="user-card comment ">
-                      <Link onClick={() => HandleOpen(user)} className='comments-link'><p> <span className='span-c'>Comments:</span>  {user.body}</p></Link>
+                      <Link onClick={() => HandleOpen(user)} className='comments-link'><p> <span className='span-c'>{languageData[lang].sidebar.comments}:</span>  {user.body}</p></Link>
                    </div>
                   
                   ))

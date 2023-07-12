@@ -2,15 +2,17 @@ import React from 'react'
 import { useContext } from 'react'
 import { useEffect } from 'react'
 import { HeaderContext } from '../../context/Context'
+import { languageData } from '../../Lang/Language'
 
 const Articles = () => {
+  const {lang} = useContext(HeaderContext) 
   const {setHeaderTitle} = useContext(HeaderContext)
   useEffect(() => {
-    setHeaderTitle('Articles')
+    setHeaderTitle(languageData[lang].sidebar.articles)
   })
   return (
     <div className='articles'>
-      <h1>Articles</h1>
+      <h1>{languageData[lang].sidebar.articles}</h1>
     </div>
   )
 }

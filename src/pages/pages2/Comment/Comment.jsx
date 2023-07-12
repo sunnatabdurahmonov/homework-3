@@ -3,10 +3,13 @@ import '../Comment/Comment.scss'
 import { useState,useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { Url } from '../../../Url'
-// import axios from 'axios'
-const page = 1
+import { useContext } from 'react'
+import { languageData } from '../../../Lang/Language'
+import { HeaderContext } from '../../../context/Context'
+import { useFetch } from '../../../hooks/useFetchData'
 
 const Comment = () => {
+    const {lang} = useContext(HeaderContext)
 
 
     const [comment, setComment]  = useState({
@@ -21,7 +24,6 @@ const Comment = () => {
      fetch(`${Url}/comments?postId=${postId}`)
        .then((response) => response.json())
         .then(data => {
-            // console.log(data);
             setComment({
                 isFetched:true,
                 error:false,
@@ -42,9 +44,9 @@ const Comment = () => {
             
             comment.data.map((user) => (
                 <div className="user-card comment">
-                    <h2><span>Name: </span>  {user.name}</h2>
-                    <h4> <span>Email: </span> {user.email}</h4>
-                    <p> <span className='span-c'>Comments:</span>  {user.body}</p>
+                    <h2><span>{languageData[lang].sidebar.nameIs}: </span>  {user.name}</h2>
+                    <h4> <span>{languageData[lang].sidebar.email}:</span> {user.email}</h4>
+                    <p> <span className='span-c'>{languageData[lang].sidebar.comments}:</span>  {user.body}</p>
                 </div>
             ))
         }

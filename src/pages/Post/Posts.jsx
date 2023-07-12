@@ -1,44 +1,25 @@
 import React from 'react'
 import '../Post/Posts.scss'
-import { useState } from 'react'
-import { Url } from '../../Url'
-import axios from 'axios'
 import { UsersCard } from './UsersCard'
 import { useContext } from 'react'
 import { useEffect } from 'react'
 import { HeaderContext } from '../../context/Context'
+import { languageData } from '../../Lang/Language'
+import { useFetch } from '../../hooks/useFetchData'
 
 
  const Posts = () => {
+    const {lang} = useContext(HeaderContext)
     const {setHeaderTitle} = useContext(HeaderContext)
-    const [post, setPost]  = useState({
-        isFetched: false,
-        error:null,
-        data:[]
-    })
-
+    const {data:post} = useFetch({endpoint: 'posts'})
 
     useEffect(() => {
-        setHeaderTitle('Posts')
-       axios.get(`${Url}/posts`)
-        .then(data => {
-            setPost({
-                isFetched:true,
-                error:false,
-                data:data.data
-            })
-        })
-        .catch(err => {
-            setPost({
-                isFetched:false,
-                error:err,
-                data:[]
-            })
-        })
+        setHeaderTitle(languageData[lang].sidebar.posts)
     })
+
   return (
     <div>
-    <h2 className='h1'>Posts</h2>
+    <h2 className='h1'>{languageData[lang].sidebar.posts}</h2>
  
     <div className='user-menu'>
       {

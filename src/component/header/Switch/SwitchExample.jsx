@@ -13,7 +13,7 @@ const SwitchExample = () => {
   return (
     <div>
 <label class="switch">
-  <input onClick={() => setTheme(!theme)} type="checkbox"/>
+  <input onClick={() => setTheme(!theme)}  type="checkbox"/>
   <span class="slider round"></span>
 </label>
       

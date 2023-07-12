@@ -1,4 +1,3 @@
-import React, { useContext } from 'react'
 import '../Sidebar/Sidebar.scss'
 import logo from '../../assest/logo.svg'
 import SidebarLink from '../SidebarLink/SidebarLink'
@@ -10,13 +9,16 @@ import logo5 from '../../assest/logo5.svg'
 import logo6 from '../../assest/logo6.svg'
 import logo7 from '../../assest/logo7.svg'
 import logo8 from '../../assest/logo8.svg'
-import Tickets from '../../pages/tickets/Tickets'
+import { useContext } from 'react'
+import { HeaderContext } from '../../context/Context'
+import {languageData} from '../../Lang/Language'
 export const Sidebar = () => {
+  const {lang} = useContext(HeaderContext)
   return (
     <div className='sidebar'>
         <div className="sidebar-menu">
             <img src={logo} alt="logo" />
-            <h1>Dashboard Kit</h1>
+            <h1>{languageData[lang].sidebar.dashboard}</h1>
         </div>
 
         <div className="ul-menu">
@@ -24,38 +26,38 @@ export const Sidebar = () => {
         <ul className='link-list'>
           <SidebarLink
                 imglink={logo1}
-                title='Overview'
+                title={languageData[lang].sidebar.overview}
                 link='/'
             />
                <SidebarLink
                 imglink={logo2}
-                title='Tickets'
+                title={languageData[lang].sidebar.tickets}
                 link='/tickets'
             />
                <SidebarLink
                 imglink={logo3}
-                title='Posts'
+                title={languageData[lang].sidebar.posts}
                 link='/posts'
             />
               <SidebarLink
                 imglink={logo4}
-                title='Comments'
+                title={languageData[lang].sidebar.comments}
                 link='/comments'
             />
                <SidebarLink
                 imglink={logo4}
-                title='Contacts'
+                title={languageData[lang].sidebar.contacts}
                 link='/contact'
             />
              
                <SidebarLink
                 imglink={logo5}
-                title='Agents'
+                title={languageData[lang].sidebar.agents}
                 link='/agents'
             />
                <SidebarLink
                 imglink={logo6}
-                title='Articles'
+                title={languageData[lang].sidebar.articles}
                 link='/articles'
             />
           </ul>
@@ -65,12 +67,12 @@ export const Sidebar = () => {
           <ul className='link-list2'>
           <SidebarLink
                 imglink={logo7}
-                title='Settings'
+                title={languageData[lang].sidebar.settings}
                 link='/setting'
             />
               <SidebarLink
                 imglink={logo8}
-                title='Subscription'
+                title={languageData[lang].sidebar.subscriptions}
                 link='/subscription'
             />
 

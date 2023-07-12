@@ -37,3 +37,19 @@ header{
     background-color:#363740 !important;
     color:#fff ;
   }
+  .select {
+    background:  #363740;
+    border: none;
+    border-radius: 0;
+    color: #DDE2FF;
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .select:after {
+    content: " ";
+    display: inline-block;
+    width: 24px; height: 24px;
+    background: blue;
+  }
